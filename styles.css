@@ -1,0 +1,158 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: #ecf2f8;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial_container {
+  width: 75vw;
+  max-width: 1040px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "card1 card1 card2 card3"
+    "card4 card5 card5 card3";
+
+  grid-gap: 1em;
+}
+
+@media (max-width: 768px) {
+  .testimonial_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card4"
+      "card5"
+      "card3";
+
+    margin: 2em 5em 0em;
+  }
+}
+
+.testimonials_items {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px hsla(0, 0%, 50%, 0.25);
+  padding: 1.5em 2.6em;
+
+  width: 100%;
+  height: 100%;
+
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.testimonials_item_1 {
+  background-color: var(--moderate-violet);
+
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+
+  grid-area: card1;
+}
+
+.testimonials_item_2 {
+  background-color: var(--very-dark-grayish-blue);
+  grid-area: card2;
+}
+
+.testimonials_item_3 {
+  grid-area: card3;
+}
+
+.testimonials_item_4 {
+  grid-area: card4;
+}
+
+.testimonials_item_5 {
+  grid-area: card5;
+}
+
+.testimonials_item_3,
+.testimonials_item_4 {
+  background-color: var(--white);
+  color: var(--very-dark-blackish-blue);
+}
+
+.testimonials_item_5 {
+  background-color: var(--very-dark-blackish-blue);
+}
+
+.profile > img {
+  width: 3em;
+  outline: 1px solid var(--moderate-violet);
+
+  border-radius: 50%;
+  margin-right: 0.6em;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile .name {
+  font-size: 1.2em;
+}
+
+.profile .role {
+  font-size: 1em;
+  font-weight: 600;
+  opacity: 50%;
+}
+
+.testimonials_items > h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.testimonials_items > h3 {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.5;
+
+  opacity: 70%;
+}
+
+.attribution {
+  font-size: 0.8em;
+  text-align: center;
+
+  padding-top: 1em;
+  color: var(--very-dark-blackish-blue);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
