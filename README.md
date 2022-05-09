@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/testimonials-grid-section-html-and-css-Hk_9hZIIc)
 - Live Site URL: [Live Site](https://elegant-nougat-5a6d8e.netlify.app/)
 
 ## My process
